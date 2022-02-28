@@ -1,0 +1,18 @@
+<script>
+    function sprechen() {
+        var element = document.querySelector("#ID");
+        text = element.innerText;
+        synth = window.speechSynthesis;
+        speech = new SpeechSynthesisUtterance(text);
+        speech.lang = "de";
+        synth.speak(speech);
+    }
+</script>
+<div style="background-color:#def;padding:1em;">
+<div id="ID">
+
+</div>
+<span style="float:right;text-align:right;position:relative;top:-1em;">
+<button class="btn btn-primary" style="font-size:2em;border-radius:1em;" 
+onclick="sprechen()"><span style="filter:invert(1);filter:grayscale(1)">🔉
+</span></button></span></div>
